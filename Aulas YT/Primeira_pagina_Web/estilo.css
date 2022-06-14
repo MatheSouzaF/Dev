@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+}
+div{
+    text-align: center;
+    border-top:  1px solid #d5d5d5;
+    padding: 50px;
+}
+img{
+    width: 190px;
+}
+h1{
+    font-family: 'Tahome', sans-serif;
+    text-align: center;
+    margin: 0;
+}
+h2{
+    font-family: 'Tahome', sans-serif;
+    text-align: center;
+}
+h3{
+    font-family: 'Tahome', sans-serif;
+    text-align: center;
+}
+p{
+    font-family: 'Tahome', sans-serif;
+    text-align: center;
+    line-height: 28px;
+    margin: 15px auto 30px auto;
+    width: 930px;
+}
+a{
+    font-family: 'Tahome', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none; 
+    color: #ffffff;
+    padding: 10px 30px;
+    background-color: #49b970;
+    border-radius: 25px;
+   
+ }
+
+ span{
+    font-family: 'Tahome', sans-serif; 
+    font-weight: bold;
+ }
