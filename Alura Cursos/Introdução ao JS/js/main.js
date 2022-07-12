@@ -1,4 +1,4 @@
-// var titulo = document.querySelector(".titulo");
+var titulo = document.querySelector(".titulo");
 // 			titulo.textContent = "Matheus Alimentos"
 
 var pacientes = document.querySelectorAll(".paciente");
@@ -38,6 +38,8 @@ for (var i = 0; i < pacientes.length ; i++) {
     }
 }
 
+var botaoAdicionar = document.querySelector("#adicionar-paciente");
 
-
-console.log(imc);
+botaoAdicionar.addEventListener("click", function(){
+    console.log("Oi")
+})
