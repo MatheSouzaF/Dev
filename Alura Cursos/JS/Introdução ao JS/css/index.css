@@ -5,6 +5,7 @@
 body{
 	font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 	font-size: 14px;
+	background: #6d6a6a;
 }
 
 header{
@@ -71,7 +72,7 @@ th{
 }
 
 label{
-	color: #555;
+	color: rgb(255, 255, 255);
 	display: block;
 	margin-bottom: .2em;
 }

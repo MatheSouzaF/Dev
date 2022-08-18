@@ -1,9 +1,9 @@
 var titulo = document.querySelector(".titulo");
-// 			titulo.textContent = "Matheus Alimentos"
+titulo.textContent = "Matheus Alimentos"
 
 var pacientes = document.querySelectorAll(".paciente");
 
-for (var i = 0; i < pacientes.length ; i++) {
+for (var i = 0; i < pacientes.length; i++) {
 
     var paciente = pacientes[i];
 
@@ -23,7 +23,7 @@ for (var i = 0; i < pacientes.length ; i++) {
         pesoEhValido = false;
         tdImc.textContent = "Peso inválido";
         paciente.classList.add("paciente-invalido")
-        
+
     }
     if (altura <= 0 || altura >= 3.00) {
         console.log("Altura inválida");
@@ -38,8 +38,5 @@ for (var i = 0; i < pacientes.length ; i++) {
     }
 }
 
-var botaoAdicionar = document.querySelector("#adicionar-paciente");
 
-botaoAdicionar.addEventListener("click", function(){
-    console.log("Oi")
-})
+
