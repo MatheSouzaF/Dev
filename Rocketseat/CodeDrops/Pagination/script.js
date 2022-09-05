@@ -1,19 +1,19 @@
-function populateList() {
-    const data = Array.from({ length: 100 })
-        .map((_, i) => `<div class="item">tem ${(i + 1)}</div>`)
+const data = Array.from({ length: 100 })
+    .map((_, i) => `Item ${(i + 1)}`)
+// function populateList() {
 
-    const list = document.querySelector('.list')
-    list.innerHTML = data.join("")
-    return data
-}
-const data = populateList()
 
+//     const list = document.querySelector('.list')
+//     list.innerHTML = data.join("")
+//     return data
+// }
 
 let perPage = 5
 const state = {
     page: 1,
     perPage,
-    totalPage: Math.ceil(data.length / perPage)
+    totalPage: Math.ceil(data.length / perPage),
+    maxVisibleButtons: 5
 }
 const html = {
     get(element) {
@@ -41,7 +41,7 @@ const controls = {
         if (page < 1) {
             page = 1
         }
-        state.page = page
+        state.page = +page
 
         if (page > state.totalPage) {
             state.page = state.totalPage
@@ -67,11 +67,79 @@ const controls = {
     }
 }
 
-function update() {
-    console.log(state.page)
+
+const list = {
+    create(item) {
+        const div = document.createElement('div')
+        div.classList.add('item')
+        div.innerHTML = item
+
+        html.get('.list').appendChild(div)
+    },
+    update() {
+        html.get('.list').innerHTML = ""
+        let page = state.page - 1
+        let start = page * state.perPage
+        let end = start + state.perPage
+
+        const paginatedItem = data.slice(start, end)
+
+        paginatedItem.forEach(list.create)
+    }
 }
 
-function init(){
 
+const buttons = {
+
+    element: html.get('.pagination .numbers'),
+    create(number) {
+        const button = document.createElement('div')
+        button.innerHTML = number;
+
+        button.addEventListener('click', (event) => {
+            const page = event.target.innerHTML
+
+            controls.goTo(page)
+            update()
+
+        })
+
+        buttons.element.appendChild(button)
+    },
+    update() {
+        buttons.element.innerHTML = ""
+        const { maxLeft, maxRight } = buttons.calculateMaxVisible()
+        for (let page = maxLeft; page <= maxRight; page++) {
+            buttons.create(page)
+        }
+
+    },
+    calculateMaxVisible() {
+        const { maxVisibleButtons } = state
+        let maxLeft = (state.page - Math.floor(maxVisibleButtons / 2))
+        let maxRight = (state.page + Math.floor(maxVisibleButtons / 2))
+
+        if (maxLeft < 1) {
+            maxLeft = 1
+            maxRight = maxVisibleButtons
+        }
+
+        if (maxRight > state.totalPage) {
+            maxLeft = state.totalPage - (maxVisibleButtons - 1)
+            maxRight = state.totalPage
+            if (maxLeft < 1) maxLeft = 1
+        }
+        return { maxLeft, maxRight }
+    }
+}
+function update() {
+    list.update()
+    buttons.update()
+}
+
+function init() {
+    list.update()
     controls.createListeners()
 }
+
+init()
