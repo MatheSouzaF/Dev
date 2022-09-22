@@ -4,7 +4,7 @@ import { StyleSheet, Text, View, TouchableOpacity, } from 'react-native';
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Oi Matheus tudo bem</Text>
+      <Text>Oi Matheus </Text>
       <Button title="Send 1" />
       <StatusBar style="auto" />
     </View>
