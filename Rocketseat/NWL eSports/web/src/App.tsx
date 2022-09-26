@@ -8,7 +8,7 @@ function App() {
     <div className="max-w-[1344px] mx-auto flex flex-col items-center my-20">
       <img src={logoImg} />
 
-      <h1 className="text-6xl text-red font-black mt-20">
+      <h1 className="text-6xl text-white font-black mt-20">
         Seu{" "}
         <span className="text-transparent bg-nlw-gradient bg-clip-text">
           duo
@@ -69,7 +69,7 @@ function App() {
       <div className="pt-1 mt-8 bg-nlw-gradient self-stretch rounded-lg overflow-hidden">
         <div className="bg-[#2A2634] px-8 py-6 flex justify-between items-center">
           <div>
-            <strong className="text-2xl text-red font-black block">
+            <strong className="text-2xl text-white font-black block">
               Não encontrou seu duo?
             </strong>
             <span className="text-zinc-400 block">
@@ -87,3 +87,4 @@ function App() {
 }
 
 export default App;
+
