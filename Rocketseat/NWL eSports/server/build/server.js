@@ -5,6 +5,12 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const app = (0, express_1.default)();
+app.get('/games', (request, response) => {
+    return response.json([]);
+});
+app.post('/ads', (request, response) => {
+    return response.json([]);
+});
 app.get("/ads", (request, response) => {
     return response.json([
         { id: 1, name: 'Anúncio 1' },
