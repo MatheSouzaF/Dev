@@ -10,7 +10,7 @@ import {
 
 import { Home } from "./src/screens/Home";
 import { Background } from "./src/Components/Background";
-
+import { Loading } from "./src/Components/Loading";
 export default function App() {
   const [fontsLoade] = useFonts({
     Inter_400Regular,
@@ -26,7 +26,7 @@ export default function App() {
         backgroundColor="transparent"
         translucent
       />
-      {fontsLoade ? <Home /> :  }
+      {fontsLoade ? <Home/> : <Loading/>}
     </Background>
   );
 }
