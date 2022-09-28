@@ -9,7 +9,7 @@ app.get('/games', (request, response) => {
     return response.json([]);
 });
 app.post('/ads', (request, response) => {
-    return response.json([]);
+    return response.status(200).json([]);
 });
 app.get("/ads", (request, response) => {
     return response.json([
