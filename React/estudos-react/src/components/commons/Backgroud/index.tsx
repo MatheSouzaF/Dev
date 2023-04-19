@@ -9,7 +9,7 @@ export function Backgroud() {
                 <Flex gap={"20px"} color={"white"}>
                     <Link  href='https://chakra-ui.com' isExternal className="header-text">ENGIE</Link>
                     <Link  href='https://chakra-ui.com' isExternal className="header-text">Soluções</Link>
-                    <Link  href='https://chakra-ui.com' isExternal className="header-text">Sustentabilidade</Link>
+                    <Link  href='https://chakra-ui.com' isExternal className="header-text-active">Sustentabilidade</Link>
                     <Link  href='https://chakra-ui.com' isExternal className="header-text">Investidores</Link>
                     <Link  href='https://chakra-ui.com' isExternal className="header-text">Carreira</Link>
                     <Link  href='https://chakra-ui.com' isExternal className="header-text">Contato</Link>

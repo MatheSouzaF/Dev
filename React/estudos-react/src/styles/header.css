@@ -6,3 +6,12 @@ font-size: 16px;
 line-height: 24px;
 color: #FFFFFF;
 }
+body{
+background-color: #E5E5E5 !important;   
+
+}
+.border{
+    border-bottom: 4px solid !important;
+    border-image: linear-gradient(266.01deg, #23D2B5 -2.19%, #00BCFD 102.67%);
+    border-image-slice: 1;
+}

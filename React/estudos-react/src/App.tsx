@@ -1,14 +1,13 @@
-import { Backgroud } from "./components/commons/Backgroud"
-import { TitleDescription } from "./components/TitleDescription"
+import { Box } from "@chakra-ui/react"
+import PaginaPrograma from "./pages/PaginaPrograma"
 
 
 function App() {
 
   return (
-    <div>
-      <Backgroud />
-      <TitleDescription nome="Matheus" idade="25"/>
-    </div>
+    <Box maxW={"1280px"} mx={"auto"}>
+      <PaginaPrograma/>
+    </Box>
   )
 }
 
